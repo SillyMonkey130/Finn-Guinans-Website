@@ -3,21 +3,28 @@
 }
 body{
     margin: 0;
+    background-image: url(/images/backgroundHome.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 main{
     margin-left: 20px;
     margin-right: 20px;
 }
 header{
-  background-color: rgba(154, 0, 100, 0.8);
-  padding: 10px;
+    background-color: hsla(321, 100%, 30%, 0.7);
+    padding: 10px;
 }
 h1{
-    text-align: center;    
+    text-align: center;
+    color: white;
+    text-shadow: 3px 3px 5px black;   
 }
 .navbar ul{
     list-style-type: none;
-    background-color: rgba(43, 43, 43, 0.856);
+    background: linear-gradient(180deg, hsla(321, 100%, 30%, 0.7), hsl(237, 100%, 10%));
     padding: 0px;
     margin: 0px;
     overflow: hidden;
@@ -26,14 +33,15 @@ h1{
 .navbar a{
     text-decoration: none;
     color: white;
+    text-shadow: 3px 3px 5px black; 
     padding: 15px;
     display: block;
     text-align: center;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 .navbar a:hover{
-    background-color: rgb(85, 83, 83);
+    background: linear-gradient(180deg, hsla(321, 99%, 35%, 0.7), hsl(237, 100%, 10%));
 }
 
 .navbar li{

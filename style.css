@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+main{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+header{
+  background-color: rgba(154, 0, 100, 0.8);
+  padding: 10px;
+}
+h1{
+    text-align: center;    
+}
+.navbar ul{
+    list-style-type: none;
+    background-color: rgba(43, 43, 43, 0.856);
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    font-size: 2em;
+}
+
+.navbar a:hover{
+    background-color: rgb(85, 83, 83);
+}
+
+.navbar li{
+    float: left;
+    width: 20vw;
+}

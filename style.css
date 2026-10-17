@@ -3,28 +3,32 @@
 }
 body{
     margin: 0;
-    background-image: url(/images/backgroundHome.jpg);
+    background-image: url(/images/backgroundHome3.jpg.avif);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    overflow: hidden;
 }
 main{
     margin-left: 20px;
     margin-right: 20px;
+    color: hsl(24, 90%, 90%);
 }
 header{
-    background-color: hsla(321, 100%, 30%, 0.7);
+    /* background-color: hsla(321, 100%, 30%, 0.7); */
+    background-color: hsla(223, 100%, 25%, 0.6);
     padding: 10px;
 }
 h1{
     text-align: center;
     color: white;
-    text-shadow: 3px 3px 5px black;   
+    text-shadow: 4px 4px 5px black;   
 }
 .navbar ul{
     list-style-type: none;
-    background: linear-gradient(180deg, hsla(321, 100%, 30%, 0.7), hsl(237, 100%, 10%));
+    /* background: linear-gradient(180deg, hsla(321, 100%, 30%, 0.7), hsl(237, 100%, 10%)); */
+    background: linear-gradient(180deg, hsla(223, 100%, 25%, 0.6), hsl(268, 100%, 33%));
     padding: 0px;
     margin: 0px;
     overflow: hidden;
@@ -33,7 +37,7 @@ h1{
 .navbar a{
     text-decoration: none;
     color: white;
-    text-shadow: 3px 3px 5px black; 
+    text-shadow: 4px 4px 5px hsl(0, 0%, 0%); 
     padding: 15px;
     display: block;
     text-align: center;
@@ -41,10 +45,50 @@ h1{
 }
 
 .navbar a:hover{
-    background: linear-gradient(180deg, hsla(321, 99%, 35%, 0.7), hsl(237, 100%, 10%));
+    /* background: linear-gradient(180deg, hsla(321, 100%, 35%, 0.7), hsl(237, 100%, 15%)); */
+    background: linear-gradient(180deg, hsla(223, 100%, 40%, 0.6), hsl(268, 100%, 30%));
+    box-shadow: 2px 2px 15px 10px hsla(267, 100%, 35%, 0.7);
 }
 
 .navbar li{
     float: left;
     width: 20vw;
+}
+@media only screen and (max-height: 400px) {
+    header{display: none;}
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+   .text{font-size: 1.2em;} 
+   .navbar a{font-size: 1.3em;}
+   h1{font-size: 1.5em;}
+   .text{line-height: 1.2;}
+
+}
+
+@media only screen and (min-width: 600px) {
+    .text{font-size: 1.3em;} 
+    h1{font-size: 1.5em;}
+    .text{line-height: 1.3;}
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .text{font-size: 1.4em;}
+    h1{font-size: 1.9em;}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .text{font-size: 1.5em;}
+    .navbar a{font-size: 1.6em;}
+    .text{line-height: 1.3;}
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .text{font-size: 1.6em;}
 }

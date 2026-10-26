@@ -1,19 +1,27 @@
 *{
     box-sizing: border-box;
 }
+html{
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overscroll-behavior: none;
+}
+html::-webkit-scrollbar {
+    display: none;
+}
 body{
     margin: 0;
-    background-image: url(/images/backgroundHome3.jpg.avif);
+    background-image: url(/images/backgroundHome.jpg.avif);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    overflow: hidden;
 }
 main{
     margin-left: 20px;
     margin-right: 20px;
-    color: hsl(24, 90%, 90%);
+    color: white;
 }
 header{
     /* background-color: hsla(321, 100%, 30%, 0.7); */
@@ -24,6 +32,11 @@ h1{
     text-align: center;
     color: white;
     text-shadow: 4px 4px 5px black;   
+}
+.navbar{
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 .navbar ul{
     list-style-type: none;

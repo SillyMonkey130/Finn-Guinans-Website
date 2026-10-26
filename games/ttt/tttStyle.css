@@ -1,0 +1,78 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+    font-size: 2em;
+    margin: 0;
+    font-size: 2.5em;
+}
+.button{
+    background-color: hsl(240, 100%, 75%);
+    padding: 20px 50px;
+    margin: 10px;
+    color: black;
+    text-align: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+.box{
+    width: 150px;
+    height: 150px;
+    background-color: hsla(60, 100%, 60%, 0.85);
+    box-shadow: 5px 5px 5px hsl(60, 100%, 80%);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.box:hover{
+    background-color: hsla(54, 100%, 50%, 0.85);
+    box-shadow: 5px 5px 5px hsl(54, 100%, 65%);
+}
+.boxBlue{
+    background-color: blue;
+    box-shadow: 5px 5px 5px hsl(236, 100%, 80%);
+}
+.boxBlue:hover{
+    background-color: hsl(240, 100%, 60%);
+    box-shadow: 5px 5px 5px hsl(240, 100%, 80%);
+}
+.boxRed{
+    background-color: red;
+    box-shadow: 5px 5px 5px hsl(0, 100%, 80%);
+}
+.boxRed:hover{
+    background-color: hsl(0, 100%, 60%);
+    box-shadow: 5px 5px 5px hsl(0, 100%, 85%);
+}
+.gameBoard{
+    display: grid;
+    grid-template-columns: repeat(3, 150px); 
+    grid-template-rows: repeat(3, 150px); 
+    gap: 20px;
+    height: 80vh;
+    place-content: center
+}
+#winBox{
+    position: fixed;
+    z-index: 10;
+    top: 25%;
+    left: 25%;
+    width: 50vw;
+    height: 50vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5em;
+    font-weight: bold;
+    color: rgb(0, 255, 162);
+    text-shadow: 4px 4px 5px black;
+}

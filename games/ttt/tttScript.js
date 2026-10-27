@@ -22,23 +22,12 @@ board.forEach((box, index) => {
             isBlueTurn = !isBlueTurn;
             bluePlays.push(index);
             checkWin(bluePlays, "BLUE");
-            let circle = document.createElement('img');
-            circle.src = "../../images/piImage.webp"
-            circle.style.width = "100%";
-            circle.style.height = "100%";
-            event.target.append(circle); 
-
         } 
         else if (!isBlueTurn && !(event.target.classList.contains('boxBlue') || event.target.classList.contains('boxRed')) && plays >= 0) {
             event.target.classList.add('boxRed');
             isBlueTurn = !isBlueTurn;
             redPlays.push(index);
             checkWin(redPlays, "RED");
-            let cross = document.createElement('img');
-            cross.src = "../../images/wordleImage.webp"
-            cross.style.width = "100%";
-            cross.style.height = "100%";
-            event.target.append(cross);
         } 
     });
 });
@@ -75,7 +64,6 @@ function reset(){
     board.forEach((element) => {
         element.classList.remove('boxBlue');
         element.classList.remove('boxRed');
-        element.classList.remove('boxUsed');
         winBox.style.display = `none`;
         winBox.textContent = ``;
     })

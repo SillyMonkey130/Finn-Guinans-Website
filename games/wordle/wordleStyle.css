@@ -1,5 +1,6 @@
 .tiles{
     background-color: bisque;
+    box-shadow: 3px 3px 5px hsl(33, 90%, 75%);
     width: 80px;
     height: 80px;
 }
@@ -9,4 +10,9 @@
     grid-template-columns: repeat(5, 1fr); 
     gap: 10px;
     width: 30vw;
+    margin: 20px;
+}
+.gameboard{
+    display: grid;
+    place-items: center;
 }

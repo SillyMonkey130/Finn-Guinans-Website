@@ -6,10 +6,11 @@ const ATTEMPTS = 6;
 console.log(answer);
 createBoard();
 const tiles = document.querySelectorAll(".tiles");
+let gameOver = false;
 
 document.addEventListener("keydown", (event) => {
-    guessArr = inputBox.value.split("");
-    if (event.key === "Enter" && guessArr.length == 5 && attempt < ATTEMPTS){
+    let guessArr = inputBox.value.split("");
+    if (event.key === "Enter" && guessArr.length == 5 && attempt < ATTEMPTS && !gameOver){
         if (WORDS.includes(guessArr.join(""))){
             let scale = checkColor(guessArr);
             colorDivs(tiles, scale, inputBox.value.split(""), (attempt * 5));
@@ -19,7 +20,7 @@ document.addEventListener("keydown", (event) => {
             window.alert("Invalid word");
         }
         inputBox.value = "";
-        guessArr.length = 0;
+        console.log(gameOver);
     }
 })
 
@@ -36,6 +37,7 @@ function checkColor(guess){
         }
     }
     if (colors.every(element => element === "green")){
+        gameOver = true;
         setTimeout(() => {
             window.alert("You guessed " + answer + " in " + attempt + " attempts");
         }, 150);
@@ -60,9 +62,11 @@ function colorDivs(row, colors, guess, index){
         row.item(i).style.fontSize = "4em";
         row.item(i).style.textAlign = "center";
     }
-    if (attempt === (ATTEMPTS - 1)){
+    if (attempt === (ATTEMPTS - 1) && !gameOver){
         setTimeout(() => {
             window.alert("You lost. Answer was " + answer);
+            gameOver = true;
+            console.log(gameOver);
         }, 150);
     }
 }

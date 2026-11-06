@@ -8,12 +8,50 @@
         <link rel="stylesheet" href="wordleStyle.css">
     </head>
     <body>
-        <a href="../game.html">Back</a>
+        <div class="menu">
+            <a href="../game.html" class="button">Back</a>
+            <h1>Wordle</h1>
+            <button onclick="reset()" class="button">Reset</button>
+        </div>
         
         <div class="gameboard">
-            <h1>Wordle</h1>
-            <input type="text" id="inputBox" maxlength="5" minlength="5">
             <div id="container"></div>
+            <div id="keys">
+                <div class="rows">
+                    <div id="q" onclick="updateBoard('q')">Q</div>
+                    <div id="w" onclick="updateBoard('w')">W</div>
+                    <div id="e" onclick="updateBoard('e')">E</div>
+                    <div id="r" onclick="updateBoard('r')">R</div>
+                    <div id="t" onclick="updateBoard('t')">T</div>
+                    <div id="y" onclick="updateBoard('y')">Y</div>
+                    <div id="u" onclick="updateBoard('u')">U</div>
+                    <div id="i" onclick="updateBoard('i')">I</div>
+                    <div id="o" onclick="updateBoard('o')">O</div>
+                    <div id="p" onclick="updateBoard('p')">P</div>
+                </div>
+                <div class="rows">
+                    <div id="a" onclick="updateBoard('a')">A</div>
+                    <div id="s" onclick="updateBoard('s')">S</div>
+                    <div id="d" onclick="updateBoard('d')">D</div>
+                    <div id="f" onclick="updateBoard('f')">F</div>
+                    <div id="g" onclick="updateBoard('g')">G</div>
+                    <div id="h" onclick="updateBoard('h')">H</div>
+                    <div id="j" onclick="updateBoard('j')">J</div>
+                    <div id="k" onclick="updateBoard('k')">K</div>
+                    <div id="l" onclick="updateBoard('l')">L</div>
+                </div>
+                <div class="rows">
+                    <div id="enter" onclick="enter()">ENTER</div>
+                    <div id="z" onclick="updateBoard('z')">Z</div>
+                    <div id="x" onclick="updateBoard('x')">X</div>
+                    <div id="c" onclick="updateBoard('c')">C</div>
+                    <div id="v" onclick="updateBoard('v')">V</div>
+                    <div id="b" onclick="updateBoard('b')">B</div>
+                    <div id="n" onclick="updateBoard('n')">N</div>
+                    <div id="m" onclick="updateBoard('m')">M</div>
+                    <div onclick="remove()">DEL</div>
+                </div>
+            </div>
         </div>
         <script type="module" src="wordleScript.js"></script>
     </body>

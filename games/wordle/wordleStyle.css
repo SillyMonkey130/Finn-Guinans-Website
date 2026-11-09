@@ -65,6 +65,9 @@ h1{
     border-radius: 10px;
     cursor: pointer;
 }
+.button:hover{
+    background-color: hsl(240, 100%, 80%);
+}
 .menu{
     display: flex;
     justify-content: space-between;

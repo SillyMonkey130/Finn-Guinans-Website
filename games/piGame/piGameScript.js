@@ -39,7 +39,7 @@ function updateBoard(number){
     current++;
 }
 function remove(){
-    if (current === 0) return;
+    if (current <= 2) return;
     guess.pop();
     tiles[current - 1].textContent = "";
     current--;
@@ -49,12 +49,14 @@ function enter(){
         for (let i = 2; i < current; i++){
             if (guess[i] === PI[i]){
                 tiles[i].style.backgroundColor = "lightGreen";
+                tiles[i].style.boxShadow = "3px 3px 5px darkGreen";
                 correct++;
             }
             else{
                 tiles[i].textContent = PI[i];
                 tiles[i].style.color = "red";
                 tiles[i].style.backgroundColor = "grey";
+                tiles[i].style.boxShadow = "3px 3px 5px black";
             }
         }
         for (let i = current; i < NUMBERS; i++){
@@ -65,13 +67,14 @@ function enter(){
     }
 }
 function reset(){
-    for (let i = 2; i <= NUMBERS; i++){
+    for (let i = 2; i < NUMBERS; i++){
             tiles[i].textContent = "";
             tiles[i].style.backgroundColor = "bisque";
+            tiles[i].style.boxShadow = "3px 3px 5px hsl(33, 90%, 75%)";
             tiles[i].style.color = "black";
     }
-    current = 0;
-    guess = [];
+    current = 2;
+    guess = ['3', '.'];
     gameOver = false;
     correct = 0;
 }

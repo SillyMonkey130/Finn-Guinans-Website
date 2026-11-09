@@ -1,0 +1,79 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+    background-color: hsl(200, 100%, 95%);
+}
+h1{
+    margin: 20px;
+    font-size: 3em;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+.tiles{
+    background-color: bisque;
+    box-shadow: 3px 3px 5px hsl(33, 90%, 75%);
+    border-radius: 5px;
+    width: 55px;
+    height: 55px;
+    text-align: center;
+    font-size: 3em;
+}
+#container{
+    display: grid;
+    gap: 8px;
+    margin: 25px;
+}
+.gameboard{
+    display: grid;
+    place-items: center;
+}
+.button{
+    box-sizing: border-box;
+    background-color: hsl(240, 100%, 75%);
+    padding: 10px 40px;
+    height: 60px;
+    margin: 10px;
+    color: black;
+    text-align: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 768px) {
+   #container{
+        grid-template-columns: repeat(8, 1fr);
+        width: 525px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    #container{
+        grid-template-columns: repeat(11, 1fr);
+        width: 700px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    #container{
+        grid-template-columns: repeat(15, 1fr);
+        width: 915px;
+    }
+
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1300px) {
+    #container{
+        grid-template-columns: repeat(20, 1fr);
+        width: 1250px;
+    }
+}

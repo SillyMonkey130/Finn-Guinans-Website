@@ -10,8 +10,6 @@ const tiles = document.querySelectorAll(".tiles");
 let gameOver = false;
 let guess = [];
 const colorOrder = ['white', 'grey', 'yellow', 'green'];
-// TO DO:
-// 1) Make the Reset button work
 
 document.addEventListener("keydown", (event) => {
     if (event.key === "Enter"){
@@ -66,6 +64,9 @@ function createBoard(){
         tile.classList.add("tiles");
         container.appendChild(tile);
     }
+    const winBox = document.createElement("div");
+    winBox.classList.add("winBox");
+    container.appendChild(winBox);
 }
 function updateBoard(letter){
     tiles[guess.length + WORD_LENGTH * attempt].textContent = letter.toUpperCase();
@@ -91,8 +92,12 @@ function enter(){
     else if (attempt === ATTEMPTS) endGame(`You lost. Answer was ${answer}`);
 }
 function endGame(message) {
-  gameOver = true;
-  setTimeout(() => alert(message), 150);
+    const winBox = document.querySelector(".winBox");
+    gameOver = true;
+    setTimeout(() => {
+        winBox.textContent = message;
+        winBox.style.display = "block";
+    }, 150);
 }
 function reset(){
     for (let i = 0; i < ATTEMPTS * WORD_LENGTH; i++){
@@ -101,12 +106,12 @@ function reset(){
         tiles.item(i).textContent = "";
     }
     const letter = document.querySelectorAll(".letter");
-    letter.forEach(element => {
-        element.style.backgroundColor = "white";});
+    letter.forEach(element => {element.style.backgroundColor = "white";});
     attempt = 0;
     guess = [];
     gameOver = false;
     answer = randomWord();
+    document.querySelector(".winBox").style.display = "none";
 }
 window.remove = remove;
 window.updateBoard = updateBoard;

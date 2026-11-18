@@ -1,4 +1,5 @@
 const container = document.getElementById("container");
+const sound = new Audio('../../sounds/winningSound.mp3');
 
 const NUMBERS = 100;
 let current = 0;
@@ -64,6 +65,10 @@ function enter(){
             tiles[i].style.color = "tomato";
         }
         gameOver = true;
+    }
+    if (correct === (NUMBERS - 2)){
+        sound.currentTime = 0;
+        sound.play();
     }
 }
 function reset(){

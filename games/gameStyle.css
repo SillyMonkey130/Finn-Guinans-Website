@@ -17,3 +17,9 @@ h3{
     font-size: 2rem;
     margin: 10px;
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 768px) {
+    .games{
+    grid-template-columns: 1fr;}
+}
